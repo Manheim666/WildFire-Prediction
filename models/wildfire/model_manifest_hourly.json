@@ -1,0 +1,37 @@
+{
+  "model_name": "XGBoost_H_Optuna",
+  "optimal_threshold": 0.28,
+  "n_features": 70,
+  "val_date": "2024-01-01",
+  "test_date": "2025-01-01",
+  "imbalance_ratio": 21.2,
+  "daytime_masking": true,
+  "train_shape": [
+    1675840,
+    70
+  ],
+  "val_shape": [
+    140544,
+    70
+  ],
+  "test_shape": [
+    188096,
+    70
+  ],
+  "metrics": {
+    "recall": 0.9721508719751251,
+    "precision": 0.12590608257169872,
+    "f1": 0.22293872362852846,
+    "accuracy": 0.7334924719292276,
+    "fn": 206.0,
+    "fp": 49923.0,
+    "tp": 7191.0,
+    "tn": 130776.0,
+    "pr_auc": 0.3599877892222234,
+    "roc_auc": 0.9286229494345155
+  },
+  "overfit_gap": 0.004798808478610722,
+  "total_models_compared": 4,
+  "recall_first": true,
+  "threshold_strategy": "recall-optimized with fallback cascade"
+}

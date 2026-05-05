@@ -1,0 +1,41 @@
+{
+  "model_name": "SoftVoting_Top3",
+  "optimal_threshold": 0.17000000000000004,
+  "n_features": 184,
+  "val_date": "2024-01-01",
+  "test_date": "2025-01-01",
+  "imbalance_ratio": 11.0,
+  "train_shape": [
+    69840,
+    184
+  ],
+  "val_shape": [
+    5856,
+    184
+  ],
+  "test_shape": [
+    7840,
+    184
+  ],
+  "metrics": {
+    "recall": 0.9859402460456942,
+    "precision": 0.12872877466727856,
+    "f1": 0.22772478181449157,
+    "accuracy": 0.5146683673469388,
+    "fn": 8.0,
+    "fp": 3797.0,
+    "tp": 561.0,
+    "tn": 3474.0,
+    "pr_auc": 0.41139678673577845,
+    "roc_auc": 0.893769190217826
+  },
+  "overfit_gap": 0.009089876971986682,
+  "total_models_compared": 12,
+  "recall_first": true,
+  "threshold_strategy": "recall-optimized with fallback cascade",
+  "ensemble_members": [
+    "CatBoost_Optuna",
+    "HistGBC",
+    "XGBoost_Optuna"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-05-06T00:19:35.314184+04:00",
+  "prediction_horizon_days": 30,
+  "target": "Daily probability of a NASA FIRMS wildfire detection within the city risk area",
+  "selected_model": "SoftVoting_Top3",
+  "selected_threshold": 0.17000000000000004,
+  "feature_count": 184,
+  "risk_levels": {
+    "Low": "< 15%",
+    "Moderate": "15% to 35%",
+    "High": "35% to 60%",
+    "Extreme": ">= 60%"
+  },
+  "data_sources": [
+    "NASA FIRMS MODIS/VIIRS",
+    "Open-Meteo ERA5/ERA5-Land",
+    "Open-Elevation/static geography"
+  ],
+  "hourly_model": {
+    "model_name": "XGBoost_H_Optuna",
+    "optimal_threshold": 0.28,
+    "prediction_horizon_hours": 168,
+    "n_features": 70
+  }
+}

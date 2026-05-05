@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# CatBoost training artifacts
+catboost_info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Requests HTTP cache (large, regenerated on run)
+data/raw/.cache.sqlite
+
+# Notebook artifacts
+notebooks/cache/
+notebooks/logs/
+
+# Pipeline runner logs
+logs/
+
+# Temp files
+*.tmp
+*.bak
+models/**/*.joblib
+models/**/*.pkl
+
+# Model artifacts
+models/**/*.joblib
+models/**/*.pkl
+models/**/*.h5
+
+# Generated/cache files
+data/raw/.cache.sqlite
+logs/
+**/__pycache__/
+*.pyc
+notebooks/catboost_info/
+
+# Generated/cache files
+logs/
+**/__pycache__/
+*.pyc
+notebooks/catboost_info/
+data/raw/.cache.sqlite
+
+# Model artifacts
+models/**/*.joblib
+models/**/*.pkl
+models/**/*.h5
+models/**/*.cbm
+
+# Local environments
+.venv/
+venv/
+.env
