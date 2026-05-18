@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   MANHEIM Wildfire & Weather Intelligence — app.js  v2
+   ARIAN Wildfire & Weather Intelligence — app.js  v2
    ═══════════════════════════════════════════════════════════ */
 
 const RISK = {
@@ -439,7 +439,7 @@ function renderAll() {
 
 /* ─── BOOT ────────────────────────────────────────────── */
 loadData().catch(err => {
-  console.error("MANHEIM load error:", err);
+  console.error("ARIAN load error:", err);
   document.querySelector("main").innerHTML =
     `<div style="padding:60px 28px;text-align:center"><h2>Could not load data</h2><p>${err.message}</p></div>`;
   document.body.classList.add("loaded");
