@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — General Utilities
+ARIAN Wildfire Prediction — General Utilities
 ===============================================
 Helpers for data loading, saving, and misc operations.
 """

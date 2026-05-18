@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Output Validation
+ARIAN Wildfire Prediction — Output Validation
 ===============================================
 Run validation checks on all pipeline outputs. Returns structured
 pass/fail results suitable for the validate_pipeline_outputs.py script.
@@ -531,7 +531,7 @@ def print_report(checks: List[Check], consistency_report: pd.DataFrame) -> int:
 
     print()
     print("═" * 70)
-    print("  MANHEIM Pipeline Validation Report")
+    print("  ARIAN Pipeline Validation Report")
     print("═" * 70)
 
     if failed:

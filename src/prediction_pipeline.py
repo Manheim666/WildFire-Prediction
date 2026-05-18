@@ -1,5 +1,5 @@
 """
-MANHEIM 30-day wildfire risk prediction pipeline.
+ARIAN 30-day wildfire risk prediction pipeline.
 
 This script trains several forecast-compatible wildfire classifiers using a
 strict temporal split, selects the best calibrated probability model, scores the

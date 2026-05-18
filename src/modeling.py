@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Modeling Utilities
+ARIAN Wildfire Prediction — Modeling Utilities
 ================================================
 Model factories, training helpers, hyperparameter search utilities.
 """

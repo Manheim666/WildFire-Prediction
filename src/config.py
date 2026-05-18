@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Central Configuration
+ARIAN Wildfire Prediction — Central Configuration
 ===================================================
 All shared constants, paths, city definitions, and column lists.
 Import from any notebook:  from src.config import *
@@ -9,13 +9,13 @@ from pathlib import Path
 
 # ── Project root detection ────────────────────────────────────────────────
 def detect_project_root() -> Path:
-    if os.environ.get("MANHEIM_ROOT"):
-        return Path(os.environ["MANHEIM_ROOT"]).expanduser().resolve()
+    if os.environ.get("ARIAN_ROOT"):
+        return Path(os.environ["ARIAN_ROOT"]).expanduser().resolve()
     if "google.colab" in sys.modules:
         from google.colab import drive
         if not os.path.ismount("/content/drive"):
             drive.mount("/content/drive")
-        return Path("/content/drive/MyDrive/MANHEIM_Data")
+        return Path("/content/drive/MyDrive/ARIAN_Data")
     here = Path.cwd().resolve()
     for cand in [here, *here.parents]:
         if (cand / "data").is_dir() and (cand / "notebooks").is_dir():

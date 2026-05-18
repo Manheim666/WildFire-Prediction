@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Evaluation Utilities
+ARIAN Wildfire Prediction — Evaluation Utilities
 ==================================================
 Metrics, threshold tuning, leaderboard helpers.
 """

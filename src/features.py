@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Feature Engineering Utilities
+ARIAN Wildfire Prediction — Feature Engineering Utilities
 ==========================================================
 Reusable functions for creating weather and wildfire features.
 """

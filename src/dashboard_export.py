@@ -1,5 +1,5 @@
 """
-MANHEIM Wildfire Prediction — Unified Dashboard Export
+ARIAN Wildfire Prediction — Unified Dashboard Export
 ======================================================
 Single source of truth for all dashboard JSON/CSV exports.
 Ensures daily and hourly outputs use consistent column names,
