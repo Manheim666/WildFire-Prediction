@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   MANHEIM Wildfire & Weather Intelligence — app.js  v2
-   ═══════════════════════════════════════════════════════════ */
-
 const RISK = {
   Low:      { color: "#22a66e", bg: "rgba(34,166,110,.08)",  gradient: "linear-gradient(135deg,#22a66e,#2ecc71)" },
   Moderate: { color: "#daa520", bg: "rgba(218,165,32,.08)",  gradient: "linear-gradient(135deg,#daa520,#f1c40f)" },
@@ -433,7 +429,7 @@ function renderAll() {
 
 /* ─── BOOT ────────────────────────────────────────────── */
 loadData().catch(err => {
-  console.error("MANHEIM load error:", err);
+  console.error("ARIAN load error:", err);
   document.querySelector("main").innerHTML =
     `<div style="padding:60px 28px;text-align:center"><h2>Could not load data</h2><p>${err.message}</p></div>`;
   document.body.classList.add("loaded");
