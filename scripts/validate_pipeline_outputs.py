@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MANHEIM Pipeline Output Validation Script
+ARIAN Pipeline Output Validation Script
 ==========================================
 Checks all required files, columns, bounds, and daily/hourly consistency.
 
@@ -22,7 +22,7 @@ from src.validation import run_all_checks, print_report
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate MANHEIM pipeline outputs")
+    parser = argparse.ArgumentParser(description="Validate ARIAN pipeline outputs")
     parser.add_argument("--save-report", action="store_true",
                         help="Save consistency report to outputs/consistency_report.csv")
     args = parser.parse_args()
