@@ -1,4 +1,4 @@
-# MANHEIM Wildfire Prediction Pipeline — Dependencies
+# ARIAN Wildfire Prediction Pipeline — Dependencies
 # ─────────────────────────────────────────────────────
 # Core
 pandas>=2.0

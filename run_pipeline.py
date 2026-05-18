@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MANHEIM Wildfire Prediction — Pipeline Runner
+ARIAN Wildfire Prediction — Pipeline Runner
 =============================================
 Single entry point for all pipeline operations.
 
@@ -20,8 +20,8 @@ Execution modes
 Speed / tuning flags
 ---------------------
   --fast           Skip NB6 (climate report); cap cell timeout at 3600 s
-  --retune         Force Optuna re-tuning in NB4  (sets MANHEIM_RETUNE=1)
-  --skip-shap      Skip SHAP in NB4               (sets MANHEIM_SKIP_SHAP=1)
+  --retune         Force Optuna re-tuning in NB4  (sets ARIAN_RETUNE=1)
+  --skip-shap      Skip SHAP in NB4               (sets ARIAN_SKIP_SHAP=1)
 
 Other flags
 -----------
@@ -227,7 +227,7 @@ def write_log(results: list, pipeline_elapsed: float, args: argparse.Namespace) 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     log = LOG_DIR / f"pipeline_{time.strftime('%Y%m%d_%H%M%S')}.log"
     with open(log, "w") as f:
-        f.write(f"MANHEIM Pipeline — {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"ARIAN Pipeline — {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"mode={args.mode}  script={args.script}  fast={args.fast}\n")
         f.write("=" * 64 + "\n")
         for name, ok, elapsed, err in results:
@@ -245,7 +245,7 @@ def write_log(results: list, pipeline_elapsed: float, args: argparse.Namespace) 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="MANHEIM — single pipeline entry point",
+        description="ARIAN — single pipeline entry point",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("--mode", choices=["full", "train", "predict", "weather"],
@@ -264,9 +264,9 @@ def main():
     parser.add_argument("--fast", action="store_true",
                         help="Skip NB6 (climate report); cap timeout at 3600 s")
     parser.add_argument("--retune", action="store_true",
-                        help="Force Optuna re-tuning (sets MANHEIM_RETUNE=1)")
+                        help="Force Optuna re-tuning (sets ARIAN_RETUNE=1)")
     parser.add_argument("--skip-shap", dest="skip_shap", action="store_true",
-                        help="Skip SHAP (sets MANHEIM_SKIP_SHAP=1)")
+                        help="Skip SHAP (sets ARIAN_SKIP_SHAP=1)")
     parser.add_argument("--validate", action="store_true",
                         help="Run validate_pipeline_outputs.py after pipeline")
     args = parser.parse_args()
@@ -274,9 +274,9 @@ def main():
     # Build env vars
     env_vars: dict[str, str] = {}
     if args.retune:
-        env_vars["MANHEIM_RETUNE"] = "1"
+        env_vars["ARIAN_RETUNE"] = "1"
     if args.skip_shap:
-        env_vars["MANHEIM_SKIP_SHAP"] = "1"
+        env_vars["ARIAN_SKIP_SHAP"] = "1"
 
     timeout = args.timeout
     if args.fast and timeout == 0:
@@ -285,7 +285,7 @@ def main():
     # Header
     exec_mode = "script (pure Python)" if args.script else "notebooks"
     print("=" * 64)
-    print("  MANHEIM Wildfire Prediction — Pipeline Runner")
+    print("  ARIAN Wildfire Prediction — Pipeline Runner")
     print("=" * 64)
     print(f"  Mode      : {args.mode}" + (" [fast]" if args.fast else ""))
     print(f"  Execution : {exec_mode}")
