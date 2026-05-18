@@ -40,5 +40,9 @@ jobs:
             echo "No changes to commit, skipping push"
           else
             git commit -m "Update forecast $(date -u +%Y-%m-%d)"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 5
+            done
           fi
